@@ -7,8 +7,12 @@ import messageRoutes from './message.routes.js';
 import disputeRoutes from './dispute.routes.js';
 import aiRoutes from './ai.routes.js';
 import notificationRoutes from './notification.routes.js';
+import paymentRoutes from './payment.routes.js';
 
 const router = Router();
+
+// Main Payment and Escrow Routes
+router.use('/', paymentRoutes);
 
 // Authentication ke register, login, logout aur profile routes /auth ke neeche mount hote hain.
 router.use('/auth', authRoutes);

@@ -44,6 +44,7 @@ app.get('/health', (req, res) => {
 });
 
 // API v1 Router Mount
+app.use('/api', routes);
 app.use('/api/v1', routes);
 
 // 404 & Central Error Handling

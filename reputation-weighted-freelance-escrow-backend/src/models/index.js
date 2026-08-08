@@ -27,6 +27,7 @@ export const sequelize = new Sequelize(
     host: envDbConfig.host,
     port: envDbConfig.port,
     dialect: envDbConfig.dialect || 'mysql',
+    storage: envDbConfig.storage,
     logging: envDbConfig.logging,
     pool: envDbConfig.pool,
   }

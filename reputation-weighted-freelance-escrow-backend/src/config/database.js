@@ -8,7 +8,8 @@ const config = {
     database: process.env.DB_NAME || 'freelance_escrow',
     host: process.env.DB_HOST || 'localhost',
     port: parseInt(process.env.DB_PORT || '3306', 10),
-    dialect: 'mysql',
+    dialect: process.env.DB_DIALECT || 'mysql',
+    storage: process.env.DB_STORAGE || 'database.sqlite',
     logging: false,
   },
   test: {
